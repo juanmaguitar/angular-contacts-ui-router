@@ -1,7 +1,7 @@
 <div>
-  <h2>{{contact.name}}</h2>
+  <h2>{{ $ctrl.contact.name}}</h2>
   <ul>
-    <li ng-repeat="item in contact.items">
+    <li ng-repeat="item in $ctrl.contact.items">
 
       <!-- Here's another ui-sref except THIS time we are passing parameters
            AND inheriting parameters from active ancestor states. So we don't

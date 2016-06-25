@@ -1,9 +1,10 @@
 function utils() {
 
 	// Util for finding an object by its 'id' property among an array
-	function findById(a, id) {
-    for (var i = 0; i < a.length; i++) {
-      if (a[i].id == id) return a[i];
+	function findById( list, id) {
+
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].id == id) return list[i];
     }
     return null;
   }

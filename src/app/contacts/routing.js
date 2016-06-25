@@ -1,6 +1,6 @@
 import ContactsController from './ContactsController.js';
 import template from './contacts.html';
-import resolveContacts from './contactsResolve.js';
+import getListContacts from './getListContacts.js';
 const url = '/contacts';
 
 function routing ($stateProvider) {
@@ -10,7 +10,7 @@ function routing ($stateProvider) {
           abstract: true,
           url, template,
           resolve: {
-            contactsData: resolveContacts
+            contactsList: getListContacts
           },
           controller: ContactsController,
           controllerAs: '$ctrl'

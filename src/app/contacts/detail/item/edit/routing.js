@@ -9,7 +9,8 @@ function routing ($stateProvider) {
 					views: {
             '@contacts.detail': {
               template: detailItemEditTemplate,
-              controller: DetailItemEditController
+              controller: DetailItemEditController,
+              controllerAs: '$ctrl'
             }
           }
         })

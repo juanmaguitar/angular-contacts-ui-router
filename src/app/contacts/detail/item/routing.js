@@ -11,7 +11,8 @@ function routing ($stateProvider) {
 					views: {
             '': {
               template: detailItemTemplate,
-              controller: DetailItemController
+              controller: DetailItemController,
+              controllerAs: '$ctrl'
             },
             'hint@': {
               template: hintTemplate

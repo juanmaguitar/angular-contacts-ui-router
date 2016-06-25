@@ -1,10 +1,10 @@
 class DetailItemEditCtrl {
-	constructor ( $stateParams, $state, utils) {
-		this.item = utils.findById(his.contact.items, $stateParams.itemId);
+	constructor ( $stateParams, $state, utils, contact) {
+		this.item = utils.findById(contact.items, $stateParams.itemId);
 		this.done = () => $state.go('^', $stateParams);
 	}
 }
 
-DetailItemEditCtrl.$inject = ['$stateParams', '$state', 'utilsService'];
+DetailItemEditCtrl.$inject = ['$stateParams', '$state', 'utilsService', 'contact'];
 
 export default DetailItemEditCtrl;
