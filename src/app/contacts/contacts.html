@@ -7,14 +7,14 @@
 
         <!-- This <li> will only add the 'active' class if 'contacts.detail' or its descendants are active
              AND if it is the link for the active contact (aka contactId) -->
-        <li ng-repeat="contact in contacts | limitTo:2" ui-sref-active="active">
+        <li ng-repeat="contact in $ctrl.contacts | limitTo:2" ui-sref-active="active">
 
           <!-- Here's a ui-sref that is also providing necessary parameters -->
           <a ui-sref="contacts.detail({contactId:contact.id})">{{contact.name}}</a>
         </li>
       </ul>
       <hr>
-      <button class="btn" ng-click="goToRandom()">Show random contact</button>
+      <button class="btn" ng-click="$ctrl.goToRandom()">Show random contact</button>
 
       <!-- Another named view -->
       <div ui-view="menuTip" class="slide"></div>
