@@ -4,19 +4,21 @@
   <head>
     <meta charset="utf-8">
     <title ng-bind="$state.current.name + ' - ui-router'">ui-router</title>
-  <link href="css/styles.css?c69033ae082a3852a3eb" rel="stylesheet"></head>
+  <link href="css/styles.css?36ec4494688236227a86" rel="stylesheet"></head>
   <body>
-    <div class="navbar navbar-fixed-top">
 
-      <div class="navbar-inner"><div class="container">
 
-        <a class="navbar-brand" ui-sref="home">ui-router</a>
-        <ul class="nav">
-          <li ng-class="{active: $state.includes('contacts')}"><a ui-sref="contacts.list">Contacts</a></li>
-          <li ui-sref-active="active"><a ui-sref="about">About</a></li>
-        </ul>
-        <p ui-view="hint" class="navbar-text pull-right"></p>
-      </div></div>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+      	<div class="navbar-header">
+	        <a class="navbar-brand" ui-sref="home">ui-router</a>
+	        <ul class="nav navbar-nav navbar-left">
+	          <li ng-class="{active: $state.includes('contacts')}"><a ui-sref="contacts.list">Contacts</a></li>
+	          <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+	        </ul>
+	        <p ui-view="hint" class="navbar-text pull-right"></p>
+      	</div>
+      </div>
     </div>
 
     <div ui-view class="container slide" style="padding-top: 80px;"></div>
@@ -24,9 +26,9 @@
 
     <hr>
     <pre>
-      $state = {{$state.current.name}}
-      $stateParams = {{$stateParams}}
-      $state full url = {{ $state.$current.url.source }}
+      $state = {{ $state.current.name }}
+      $stateParams = {{ $stateParams }}
+      $state full url = {{ $state.current.url }}
     </pre>
-  <script type="text/javascript" src="js/vendor.js?c69033ae082a3852a3eb"></script><script type="text/javascript" src="js/app.c69033ae082a3852a3eb.js?c69033ae082a3852a3eb"></script></body>
+  <script type="text/javascript" src="js/vendor.js?36ec4494688236227a86"></script><script type="text/javascript" src="js/app.36ec4494688236227a86.js?36ec4494688236227a86"></script></body>
 </html>
