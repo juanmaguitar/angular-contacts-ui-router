@@ -9,15 +9,9 @@ function contacts($http, utils) {
   factory.all = () => contacts;
 
   factory.get = function (id) {
-  	console.log("b --- get...")
-  	console.log(id)
-  	console.log(contacts)
-  	console.log("e ---- get...")
 		const findById = () => utils.findById(contacts,id)
 		return contacts.then(findById);
-
 	}
-
 
   return factory;
 
